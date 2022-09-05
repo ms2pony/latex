@@ -1,0 +1,11 @@
+% 参考 https://www.overleaf.com/learn/latex/TikZ_package
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    \draw[gray, thick] (-1,2) -- (2,-4);
+    \draw[gray, thick] (-1,-1) -- (2,2);
+    \filldraw[black] (0,0) circle (2pt) node[anchor=west]{point1};
+    \filldraw[black] (0.5,0.8) circle (2pt) node[anchor=west]{point2};
+\end{tikzpicture}
+\end{document}

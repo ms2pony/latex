@@ -1,0 +1,229 @@
+% !Mode:: "TeX:UTF-8"
+
+\documentclass[final]{jcr}
+%选项 preprint 提供手稿预览, 交叉引用颜色为蓝色
+%    final    提交手稿时使用, 所有交叉引用颜色改为黑色
+%    review   匿名评审模式, 打开之后编译时隐去作者信息
+
+\usepackage[ruled]{algorithm2e}
+\usepackage{hyperref}
+\usepackage{bm}
+\usepackage{lastpage}
+\usepackage{enumitem}
+
+\begin{document}
+
+%% 编辑输入区 %%
+\DOI{10.13868/j.cnki.jcr.000XXX}%文章DOI号
+\vol{7}% 卷号
+\issue{1}% 期号
+\PrintDate{2020}{10}% 出版日期, 前者为年, 后者为月
+\ReceivedDate{2019-05-01}% 收稿日期
+\FinalVersionDate{2019-09-01}% 定稿日期
+\setcounter{page}{1}
+\PrintPage{\thepage}{\pageref{LastPage}}% 论文起止页码
+\AuthorCiteInput{ZUO Z Y, ZUO Z E, ZUO Z S}%输入英文引用格式中的英文作者姓名
+%% 编辑输入区 %%
+
+%% 以下内容均由作者提供 %%
+\DocumentCode{A}%输入文献标识码
+\CLCnumber{TP309.7}%输入中图分类号
+
+\begin{frontmatter}
+  % 输入中文标题
+  \title{AES算法研究}
+
+  % 输入英文标题
+  \etitle{Research on \uppercase{AES}}
+
+  % 输入基金项目
+  \foundation{国家重点研发计划(XXXX); 国家自然科学基金 (XXXX)}
+  \efoundation{National Key Research and Development Program of China (XXXX); National Natural Science Foundation of China (XXXX)}
+  %------------- 输入作者信息 --------------%
+    % 如果所有作者都在同一单位, 输入方法如下:
+    % \author{作者一}% 输入作者中文姓名
+    % \author{作者二}% \author 命令可以重复使用
+    % \ead{Email}% 输入通讯作者的电子邮箱, 须紧随\author命令输入
+    % \cortext{通讯作者}% 输入通讯作者, 此时通讯作者为上一个\author命令输入的作者, 并结合\ead命令显示通讯作者邮箱
+    % \address{作者单位}% 输入作者单位
+
+    % 如果多个作者在不同单位, 输入方法如下:
+    % \author[biaoqian1,biaoqian2]{作者一}% 方括号内是引用自\address的标签
+    % \address[biaoqian1]{作者一的第一单位} % 方括号内是标签, 由\author命令引用
+    % \author[biaoqian2]{作者二}% 输入第二作者中文姓名
+    % \ead{Email}% 输入通讯作者的电子邮箱, 须紧随\author命令输入
+    % \cortext{通讯作者}% 输入通讯作者, 此时通讯作者为上一个\author命令输入的作者, 并结合\ead命令显示通讯作者邮箱
+    % \address[biaoqian2]{作者一的第二单位}% 输入作者单位
+
+    % 作者英文信息与上述方法相同
+  %------------- 输入作者信息 --------------%
+
+  % 输入作者中文及通讯作者信息
+  \author[1]{作者一}
+  \ead{E-mail: zuozhe1@net.cn}
+  \cortext{通信作者}
+  \author[1,2]{作者二}
+  \author[1,2]{作者三}
+
+  % 输入作者英文及通讯作者信息
+  \eauthor[1]{ZUO Zhe-Yi}
+  \ecortext{Corresponding author}
+  \eauthor[1,2]{ZUO Zhe-Er}
+  \eauthor[1,2]{ZUO Zhe-San}
+
+  % 输入作者附属单位中文
+  \address[1]{XX大学 XXXX实验室, 济南\ 250100}
+  \address[2]{XXX研究院, 北京\ 100190}
+
+  % 输入作者附属单位英文
+  \eaddress[1]{Lab of XXXX, XXXX University, Jinan 250100, China}
+  \eaddress[2]{Academy of XXXX, Beijing 100190, China}
+
+  % 输入中文摘要
+  \begin{abstract}
+    本刊要求来稿摘要内容详实, 字数不少于400字, 能全面表述稿件的主要观点和结论, 便于读者通过阅读摘要了解到作者的研究内容、方法和主要成果, 同时要求英文摘要对照准确.
+  \end{abstract}
+
+  % 输入中文关键词
+  \begin{keywords}
+    AES算法; 差分攻击
+  \end{keywords}
+
+  % 输入英文摘要
+  \begin{eabstract}
+    XXX.
+  \end{eabstract}
+
+  % 输入英文关键词
+  \begin{ekeywords}
+    AES; differential cryptanalysis
+  \end{ekeywords}
+\end{frontmatter}
+
+\zihao{-5}
+\section{一级标题1}
+
+正文部分\upcite{1}.文献\cite{1}说了什么
+
+\section{一级标题2}
+\subsection{二级标题1}
+\subsubsection{三级标题1}
+
+\begin{theorem}
+	定理内容.
+\end{theorem}
+
+\begin{proof}
+	证明过程.
+\end{proof}
+
+\begin{definition}
+	定义内容.
+\end{definition}
+
+\begin{lemma}
+	引理内容.
+\end{lemma}
+
+\begin{corollary}
+	推论内容.
+\end{corollary}
+
+\begin{proposition}
+	命题内容.
+\end{proposition}
+
+\begin{remark}
+	备注内容.
+\end{remark}
+
+\begin{example}
+	例子内容.
+\end{example}
+
+\begin{assumption}
+	假设条件.
+\end{assumption}
+
+\begin{algorithmn}
+	算法内容.
+\end{algorithmn}
+
+\renewcommand{\algorithmcfname}{\normalfont\kaishu  \zihao{-5} 算法}
+\SetAlgoCaptionSeparator{~}
+\begin{algorithm}[H]
+	\zihao{6}
+	\caption{\kaishu \zihao{-5} AES算法}%算法名字
+    \label{alg1}
+	\LinesNumbered %要求显示行号
+	\KwIn{input parameters A, B, C}%输入参数
+	\KwOut{output result}%输出
+
+	\For{$\mathrm{condition}$}{
+		only if\;
+		\If{$\mathrm{condition}$}{
+			1\;
+		}
+	}
+\end{algorithm}
+
+\begin{align}
+	{\deg}(g_{y_1})\leq \min⁡\{&{\rm DEG}(y_{t-r_C-r_B-1})+{\rm DEG}(z_{t-r_C}),\\                              
+	&{\rm DEG}(y_{t-r_C-r_B+1})+{\rm DEG}(z_{t-r_C-1}),\\
+	&{\rm DEG}(y_{t-r_C-r_B-1})+{\rm DEG}(y_{t-r_C-r_B})+{\rm DEG}(y_{t-r_C-r_B+1})\}\\
+	&\stackrel{\Delta}{=}d1.\\
+\end{align}
+\section{一级标题3}
+
+公式示例. 结论性公式没有必要全部编号, 后面要引用才需编号.
+\begin{equation}\label{eq1}
+a^2+b^2=c^2
+\end{equation}
+
+\begin{thebibliography}{99}
+	\bibitem{1} DE CANNI{\` E}RE C, DUNKELMAN O, KNE{\v Z}EVI{\'C} M. KATAN and KTANTAN---a family of small and efficient hardware-oriented block ciphers[C]. In: Cryptographic Hardware and Embedded Systems—CHES 2009. Springer Berlin Heidelberg, 2009: 272--288. [DOI: 10.1007/978-3-642-04138-9\_20]
+	\bibitem{2} LI Q, FENG D G, ZHANG L W, et al. Enhanced attribute-based authenticated key agreement protocol in the standard model[J]. Chinese Journal of Computers, 2013, 36(10): 2156–2167. [DOI: 10.3724/SP.J.1016.2013.02156]\\
+李强, 冯登国, 张立武, 等. 标准模型下增强的基于属性的认证密钥协商协议[J]. 计算机学报, 2013, 36(10): 2156--2167. [DOI: 10.3724/SP.J.1016.2013.02156]
+\end{thebibliography}
+\newpage
+\authorinfo
+\begin{AuthorInfo}
+  \begin{jcrbiography}[{\includegraphics[width=1.05in]{fig/zuozhe}}]{作者一} (1989--), 河南郑州人, 博士生在读. 主要研究领域为对称, 密码算法的安全性分析.\\ zuozhe1@net.cn
+  \end{jcrbiography}
+  \begin{jcrbiography}[{\includegraphics[width=1.05in]{fig/zuozhe}}]{作者二} (1982--), 山东济南人, 教授. 主要研究领域为对称, 密码算法的安全性分析. \\  zuozhe2@net.cn
+  \end{jcrbiography}
+\end{AuthorInfo}
+\begin{AuthorInfo}
+  \begin{jcrbiography}[{\includegraphics[width=1.05in]{fig/zuozhe}}]{作者三} (1989--), 北京人, 副研究员. 主要研究领域为对称, 密码算法的安全性分析.\\ zuozhe3@net.cn
+  \end{jcrbiography}
+
+\end{AuthorInfo}
+\vspace{10em}
+{\noindent\kaishu 附: 图、表模板}
+
+\begin{table}
+	\centering
+	\caption{三线式表格}{Three lines table}
+	\label{tab1}
+	\tabulinesep=1.5mm
+	\begin{tabu}to \linewidth{X[c,m]X[c,m]X[c,m]X[c,m]}
+		\tabucline[0.08em]-
+		\textbf{列1} & \textbf{列2 }& \textbf{列3} & \textbf{列4}\\
+		\tabucline-
+		行1 & XX & XX & XX \\
+		行2 & XX & XX & XX \\
+		行3 & XX & XX & XX \\
+		行4 & XX & XX & XX \\
+		\tabucline[0.08em]-
+	\end{tabu}
+\end{table}
+
+\vspace{2ex}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\linewidth]{fig/zuozhe}
+	\caption{示例}{Example}
+	\label{fig1}
+\end{figure}
+
+\end{document}

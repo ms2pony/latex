@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\begin{gather}
+    \int_\alpha^\beta f'(x) \, dx=f(\beta)-f(\alpha). \\
+    f_x = 2 \, x
+\end{gather}
+
+% equation环境无法解决换行问题
+\begin{equation}
+    \begin{aligned}
+        \int_\alpha^\beta f'(x) \, dx=f(\beta)-f(\alpha). \\
+        f_x = 2 \, x
+    \end{aligned}
+\end{equation}
+
+\begin{align*}\label{2}
+     & \int_\alpha^\beta f'(x) \, dx=f(\beta)-f(\alpha). \\
+     & f_x = 2 \, x
+\end{align*}
+
+\begin{flalign}
+    & E^2=m^2c^4+c^2p^2 &
+\end{flalign}
+\end{document}
